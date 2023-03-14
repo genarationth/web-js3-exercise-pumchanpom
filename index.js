@@ -14,7 +14,7 @@ console.log(helloWelcome('Jim', 'Elizabeth', 'Roth'));
 
 // Exercise #2 (Part #2)
 const ageCount = birthYear => {
-    let thisYear = 2023;
+    let thisYear = new Date().getFullYear();
     return thisYear - birthYear;
 }
 
@@ -30,13 +30,16 @@ const welcomeRepeat = (name1, age1, name2, age2, name3, age3) => {
 console.log(welcomeRepeat('Jim', 34, 'Elizabeth', 44, 'Roth', 29));
 
 // Challenge
-const passed = score => score >= 5 ? true : false;
+const passed = score => score > 11 ? 'error' : score >= 5 ? true : false;
 
 // test
-console.log(passed(0));
+console.log(passed(13));
+console.log(passed(10));
 
 const gradeIndicator = score => {
-    if (score === 11) {
+    if (score > 11) {
+        return 'error';
+    } else if (score === 11) {
         return 'perfect';
     } else if (score >= 8) {
         return 'excellent';
