@@ -1,5 +1,4 @@
 // Exercise #1 
-
 const costPayment = transaction => total = transaction + 3 + (transaction * 0.01);
 
 // test
